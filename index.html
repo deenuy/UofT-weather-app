@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Font Awesome Link -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+  <div class="grid-container">
+    <header class="header">
+        <div class="brand">
+            <a href="index.html">Weather Dashboard</a>
+        </div>
+        <div class="header-links">
+            <a href="index.html">Support</a>
+            <a href="index.html">Sign In</a>
+        </div>
+    </header>
+    <main>
+
+      <div class="main-container">
+        <!-- City Search Area -->
+        <div class="search-container">
+          <div class="search-block">
+            <div class="search-panel">
+              <input type="text" placeholder="Search city" class="search-input">
+            </div>
+            <button type="submit" class="search-button">Search</button>
+          </div>
+          <div class="units-container">
+            <div class="coordinates"></div>
+            <div class="switch">
+              <div class="unit-metric">
+                <input type="radio" name="units_switcher" id="metric" class="switch-input" value="metric">
+                <label for="metric" class="unit-lable">Metric: °C, m/s</label>
+              </div>
+              <div class="unit-imperial">
+                <input type="radio" name="units_switcher" id="imperial" class="switch-input" value="imperial">
+                <label for="imperial" class="unit-lable">Imperial: °F, mph</label>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Weather Results -->
+        <div class="weather-container">
+          <div class="weather-today">
+            <ul class="weather-results">
+              <li id="current-time">4:35pm, Nov 1</li>
+              <li id="current-city">Toronto, CA</li>
+              <li id="current-temp">
+                <img class="weather-icon" src="" alt="">
+                <p class="weather-temp">16°C</p>
+              </li>
+            </ul>
+            <ul class="weather-details">
+              <li>Feels like: <span class="weather-value">5°</span> </li>
+              <li>Humidity: <span class="weather-value">81%</span> </li>
+              <li>Visibility: <span class="weather-value">16.10 km</span> </li>
+              <li>UV Index: <span class="weather-value">1</span> </li>
+            </ul>
+          </div>
+          <div class="weather-5-day">
+            <div class="forecast-title">Weather Forecast</div>
+            <div class="forecast"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      © Copyright - Deenu's Portfolio Work
+    </footer>
+  </div>
+
+  <!-- Link for JavaScript CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+  <!-- Custom javascript -->
+  <script src="./assets/src/script.js"></script>
+</body>
+
+</html>
